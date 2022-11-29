@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery code</title>
+	<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+	<style>
+				button
+				{
+					background-color: skyblue;
+					height: 30px;
+					width: 200px;
+					border-radius: 20px;
+				}
+			</style> 
+</head>
+<body>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<button class="btn1">Hide</button>
+<button class="btn2">Show</button>
+<br><br>
+<br>
+<button id="btn1">On mouse hover</button><br><br>
+<button id="btn2">On click</button><br><br>
+<button id="btn3"> On double click</button><br><br>
+<button id="btn4">On mouse enter</button><br><br>
+<button id="btn5">On mouse leaving</button><br><br>
+<button id="btn6">On right click</button><br><br>
+<h1 font color="#050324">Hi! How are you?</h1>
+
+<script>
+	$(document).ready(function(){
+		$("#btn1").hover(function(){
+		$("body").css('background-color','#db690b');
+},function(){
+	$("body").css("background-color","#38a181");
+}
+	)
+		$("#btn2").click(function(){
+		$("body").css('background-color','#854f15');
+	})
+		$("#btn3").dblclick(function(){
+		$("body").css('background-color','#15857d');
+	})
+		$("#btn4").mouseenter(function(){
+		$("body").css('background-color','#3b6580');
+	})
+		$("#btn5").mouseleave(function(){
+		$("body").css('background-color','#6156bf');
+	})
+		$("#btn6").contextmenu(function(){
+		$("body").css('background-color','#a1389f');
+	})
+		$("h1").click(function(){
+		let data= $("h1").text();
+		alert(data);
+	})
+		$(".btn1").click(function(){
+		$("p").hide();
+	})
+		$(".btn2").click(function(){
+		$("p").show();
+	})
+	})
+</script>
+
+</body>
+</html>
